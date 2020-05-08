@@ -31,6 +31,7 @@ function installAwsSam(){
 
 function runSam(){
 	echo "Run sam ${INPUT_SAM_COMMAND}"
+	cd ${INPUT_WORKING_DIR}	
 	output=$(sam ${INPUT_SAM_COMMAND} 2>&1)
 	exitCode=${?}
 	echo "${output}"
